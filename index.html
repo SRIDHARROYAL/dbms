@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS Assignment Questions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #444;
+        }
+        .unit {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .unit:hover {
+            background: #0056b3;
+        }
+        .questions {
+            display: none;
+            padding: 10px;
+            border-left: 4px solid #007BFF;
+            margin-bottom: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.5s ease-in-out;
+        }
+        .question {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            font-size: 16px;
+        }
+        .question:last-child {
+            border-bottom: none;
+        }
+        .visible {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>DBMS Assignment Questions</h2>
+        
+        <div class="unit" onclick="toggleQuestions('unit1')">Unit I: Introduction</div>
+        <div class="questions" id="unit1">
+            <div class="question">1. What are the advantages and disadvantages of using DBMS?</div>
+            <div class="question">2. Distinguish between database systems and file systems.</div>
+            <div class="question">3. Define DBMS and explain its users.</div>
+            <div class="question">4. Explain real-world applications of DBMS in various domains.</div>
+            <div class="question">5. Discuss different types of database models.</div>
+            <div class="question">6. Explain three-tier schema architecture for data independence.</div>
+            <div class="question">7. Explain the architecture of Database Management Systems with a neat diagram.</div>
+            <div class="question">8. Describe the structure of a database.</div>
+            <div class="question">9. Explain centralized and client-server architecture in database systems.</div>
+        </div>
+        
+        <div class="unit" onclick="toggleQuestions('unit1_er')">Unit I: ER Model</div>
+        <div class="questions" id="unit1_er">
+            <div class="question">10. What is an ER diagram? Explain the steps to develop an ER diagram.</div>
+            <div class="question">11. Develop an ER diagram for a Banking enterprise system.</div>
+            <div class="question">12. Explain relational design from an ER diagram.</div>
+            <div class="question">13. Design a generalization–specialization hierarchy for a motor-vehicle company.</div>
+        </div>
+        
+        <div class="unit" onclick="toggleQuestions('unit2')">Unit II: Relational Model</div>
+        <div class="questions" id="unit2">
+            <div class="question">14. What is the Relational Model? Explain key concepts.</div>
+            <div class="question">15. Explain the significance of NULL values in relational databases.</div>
+            <div class="question">16. Compare super key, candidate key, and primary key.</div>
+            <div class="question">17. Explain integrity constraints in relational databases with primary and foreign key examples.</div>
+            <div class="question">18. What is referential integrity? Explain with examples.</div>
+            <div class="question">19. Explain Relational Algebra operations: SELECT, PROJECT, UNION.</div>
+            <div class="question">20. Discuss fundamental operations in Relational Algebra.</div>
+            <div class="question">21. Explain Tuple Relational Calculus.</div>
+            <div class="question">22. How are natural join and outer join performed?</div>
+            <div class="question">23. Consider an Engineering College database and perform DML operations.</div>
+            <div class="question">24. Explain various DML operations using a Student database system.</div>
+            <div class="question">25. Describe the importance of environment and structure of database systems.</div>
+            <div class="question">26. With a neat sketch, explain the architecture of client-server organization of database systems.</div>
+            <div class="question">27. How to ensure integrity with key constraints in database systems? Explain with primary and foreign key constraints.</div>
+            <div class="question">28. Discuss about the centralized architecture of database in detail.</div>
+            <div class="question">29. What are levels of abstraction in a database? Explain.</div>
+            <div class="question">30. Explain the drawbacks of file systems and how database systems offer solutions to those problems.</div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleQuestions(unitId) {
+            let questions = document.getElementById(unitId);
+            if (questions.classList.contains('visible')) {
+                questions.classList.remove('visible');
+                setTimeout(() => questions.style.display = 'none', 500);
+            } else {
+                questions.style.display = 'block';
+                setTimeout(() => questions.classList.add('visible'), 10);
+            }
+        }
+    </script>
+</body>
+</html>
